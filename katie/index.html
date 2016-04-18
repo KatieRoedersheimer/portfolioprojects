@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Katie Roedersheimer - Portfolio</title>
+    <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="app.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script type="text/javascript" src="js/script.js"></script>
+
+<script>
+              src="https://code.jquery.com/jquery-2.2.2.js"
+              integrity="sha256-4/zUCqiq0kqxhZIyp4G0Gk+AOtCJsY1TA00k5ClsZYE="
+              crossorigin="anonymous"></script>
+        <script type="text/javascript">
+            $(document).ready(function(){
+                $("#btnHello").click(function(){
+                    var first = $("#txtHello").val();
+                    request = {
+                        firstName:first,
+                        lastName:first
+                    };
+                    $.post("https://nwsxpja3zd.execute-api.us-west-2.amazonaws.com/cors/testing", JSON.stringify(request)).done(function(data){
+                        $("#divResults").append("<p>"+data.Hello+"</p>");
+                    });
+                });
+                $("#btnSubmit").click(function(){
+                    var data = {};
+                    data.firstName = $("#txtFirstName").val();
+                    data.lastName = $("#txtLastName").val();
+                    data.email = $("#txtEmail").val();
+                    data.userMessage = $("#txtUserMessage").val();
+                    data.mobile = $("#txtmobile").val();
+                    $.post("https://nwsxpja3zd.execute-api.us-west-2.amazonaws.com/cors/dynamo", JSON.stringify(data)).done(function(data){
+                        $("#divResults").append("<p> Request Done"+JSON.stringify(data)+"</p>");
+                    });
+                });         
+            });
+
+        </script>
+        <link rel="stylesheet" type="text/css" href="lambdatest.css">
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+<body>
+<nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand page-scroll" href="#page-top">KatieRoedersheimer</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a class="page-scroll" href="#about"><span id="different">A</span>bout</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#services"><span id="different">S</span>ervices</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#portfolio"><span id="different">P</span>ortfolio</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#contact"><span id="different">C</span>ontact</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+
+<!--parallax 1 -->
+<section class="bg-1 text-center">
+     <h1 class="">Katie Roedersheimer</h1>
+
+    <p class="lead">Software Developer</p>
+</section>
+<!--/parallax 1-->
+<section>
+<div class="container">
+<div class="row">
+    <div class="col-lg-12 text-center">
+    <h2 class="section-heading">Programming Languages and Skills</h2>
+    <hr class="primary">
+    </div> 
+</div>
+</div>
+<div class="container"> 
+<div class="row">
+<div class="col-lg-3 col-md-6 text-center">
+<h4>HTML5</h4>
+<i id="logo1" class="fa fa-4x fa-html5"> </i>
+<h3>Advanced</h3>
+<p>Created mutliple websites using the HTML5. Familiarity using Bootsrap. Experience creating wirefames and mockups using programs such as Balsamiq.</p>
+</div>
+<div class="col-lg-3 col-md-6 text-center">
+<h4>CSS3</h4>
+<i id="logo2" class="fa fa-4x fa-css3"> </i>
+<h3>Advanced</h3>
+<p>Designed mutliple websites using CSS3. Some experience implementing UX/UI Design principles.</p>
+</div>
+<div class="col-lg-3 col-md-6 text-center">
+<h4>JavaScript</h4>
+<img id="logo3" src="images/jslogo.png" style="height: 49.5px; width: 49.5px;"> 
+<h3>Intermediate</h3>
+<p>Created interactive websites using the JavaScript. Familiarity working with jquery to make more interactive webpages.</p>
+</div>
+<div class="col-lg-3 col-md-6 text-center">
+<h4>Node</h4>
+<img id="logo3" src="images/nodelogo.png" style="height: 49.5px; width: 49.5px;"> 
+<h3>Intermediate</h3>
+<p>Wrote basic server side srcipts using Node.js in conjuction with Amazon Web Services(AWS)/Lambda services.</p>
+</div>
+</div>
+</div>
+</section>
+
+
+<!--/container-->
+<div class="divider"></div>
+<section class="bg-2">
+    <div class="col-sm-10 col-sm-offset-1 text-center">
+         <h1 class="">My Motto: Keep going even if you get stuck, there is always a solution when you don't quit.</h1>
+
+    </div>
+</section>
+<div class="divider"></div>
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                     <h3 class="">Poftolio Content Coming Soon</h3>
+
+                </div>
+                <div class="panel-body">This is a work in progress and will soon be populated with pictures of my portfolio work that you can click on and it will take you to the various websites I have built.
+
+                This first one will be an image for a customize your own pizza website using the AWS/Lambda CDN as the backend and where all the server code and apis are set up..</div>
+                <div class="panel-footer text-right"><a href="#" class="btn btn-default">More</a>
+
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                     <h3 class="">Poftolio Content Coming Soon</h3>
+
+                </div>
+                <div class="panel-body">This is a work in progress and will soon be populated with pictures of my portfolio work that you can click on and it will take you to the various websites I have built.
+
+                This will be the second image of a map updating the location of a driver if you choose the delivery option on the customize your own pizza website. Which is using AWS/Lambda CDN as the backend and where all the server code and apis are set up.</div>
+                <div class="panel-footer text-right"><a href="#" class="btn btn-default">More</a>
+
+                </div>
+            </div>
+        </div>
+        
+
+
+
+
+        <div class="col-md-4">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                     <h3 class="">Poftolio Content Coming Soon</h3>
+
+                </div>
+                <div class="panel-body">This is a work in progress and will soon be populated with pictures of my portfolio work that you can click on and it will take you to the various websites I have built.
+
+                This will be the third image with a seach box that has an icon.  This icon when clicked willprompt ypu for your location.  If you click allow it will automatically populatate your laction using the google maps api.</div>
+                <div class="panel-footer text-right"><a href="#" class="btn btn-default">More</a>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--/container-->
+<div class="divider"></div>
+<!--parallax 2 -->
+<section class="bg-3 text-center">
+     <h1 class="">Take Time for The Beautiful Things in Life</h1>
+
+    <p class="lead"></p>
+    
+</section>
+<!--/parallax 2-->
+
+<section id="contact">
+<div class="container">
+<div class="row">
+<div class="col-lg-12 text-center">
+<h2 class="section-heading">Contact Me</h2>
+</div>
+
+<div class="row">
+<div class="col-lg-12">
+<div id="divResults">
+
+        <div id="hello">
+        <input placeholder="Send Me a Message"type="text" id="txtUserMessage"><br><br>
+        </div>
+
+        <div id="contact">
+        <input placeholder="First Name" type="text" id="txtFirstName"><br><br/>
+        <input placeholder="Last Name"type="text" id="txtLastName"><br><br/>
+        <input placeholder="Email" type="text" id="txtEmail"><br><br/>
+        <input placeholder="mobile" type="text" id="txtmobile"><br><br/>
+        <input type="button" id="btnSubmit" value="Contact Me!"/>
+        </div>
+
+        <div id="socialmedia">
+            <ul>
+                <li><a href="https://www.linkedin.com/in/katieroedersheimer"><i class="fa fa-linkedin"></i></a></li>
+                <li><a href="https://github.com/KatieRoedersheimer"><i class="fa fa-github"></i></a></li>
+
+            </ul>
+        </div>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+
+<div id="footer" class="">
+    <div class="container">
+        <p id="copyright"> &copy; Katie Roedersheimer 2016</p>
+    </div>

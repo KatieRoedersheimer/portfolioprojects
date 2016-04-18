@@ -1,0 +1,80 @@
+#hello{
+	position: absolute;
+	right: 30px;
+	text-align: center;
+}
+
+html{
+	background-image:url(./hero.jpg); 
+	background-size: cover;
+}
+
+#contact{
+position: absolute;
+text-align: center;
+left: 30px;
+margin-top: 24px;
+
+}
+#socialmedia{
+	position: absolute;
+	bottom: 10px;
+	font-size: 40px;
+	width: 1000px;
+	text-align: center;
+}
+
+ul {
+	list-style-type: none;
+	display: inline;
+}
+
+li{
+	width: 100px;
+	height: 100px;
+	border-radius: 100%;
+	background-color: #487584;
+	text-align: center;
+	font-size: 60px;
+	display: inline-block;
+}
+
+li:last-child{
+	background-color: black;
+}
+
+i {
+	margin-top: 24px;
+}
+#divResults{
+	background-color: rgba(34, 34, 34, 0.7);
+	height: 500px;
+	width: 1000px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 100px;
+	position: relative;
+}
+
+
+#txtHello {
+	width: 350px;
+	height: 200px;
+	text-align: center;
+	margin-top: 24px;
+}
+
+
+#txtFirstName {
+	width: 200px;
+
+}
+
+#txtLastName {
+	width: 200px;
+
+}
+
+#txtEmail {
+	width: 200px;
+}

@@ -1,0 +1,48 @@
+<head>
+  <link type="text/css" rel="stylesheet" href="style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script>
+  
+  /* In this assignment, it will be your job to find a way to generate a background-color out of an array i.e. ["red", "orange", "yellow", etc....] using a "Math.random"ized index. You can use a .click() function, .mouseover() function, or whatever else you might like to call your function into action. Remember, though this can be done with vanilla JavaScript, (A term used to describe something in it's base state; an original.) This assignment is to use only JQuery! I have pre-loaded the JQuery library as seen on line 6. */
+
+  /* Don't forget to use $(document).ready(function() { --YOUR CODE HERE --}); to open your JQuery file. In most, if not all JQuery applications, your code will start this way. This tells the browser to run functions and code nested within as soon as the HTML $(document) is ".ready"!  */
+$(function(){
+ $("h1").click(function(){
+ var colors=["blue","purple","blue", "red", "orange", "green", "yellow"]
+  $('h1').css('background-color', colors[Math.floor(Math.random() * colors.length)])});
+  });
+
+  </script>
+</head>
+
+<body>
+<div class="box" style="width: 500px; height: 500px; border: 3px solid black; margin: 0 auto 0 auto;">
+	</div>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
